@@ -1,11 +1,10 @@
 (function(){
   "use strict";
 
-  var gutil = require('gulp-util'),
+  var PluginError = require('plugin-error'),
     through = require('through2'),
     cssjanus = require('cssjanus'),
     _ = require('lodash');
-
 
   module.exports = function (config) {
 
@@ -22,7 +21,7 @@
       }
 
       if (file.isStream()) {
-        this.emit('error', new gutil.PluginError('gulp-cssjanus', 'Streaming not supported'));
+        this.emit('error', new PluginError('gulp-cssjanus', 'Streaming not supported'));
         return cb();
       }
 
