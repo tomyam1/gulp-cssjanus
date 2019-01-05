@@ -1,6 +1,6 @@
 {
   "name": "gulp-cssjanus",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Gulp plugin that uses cssjanus to convert LTR CSS to RTL.",
   "main": "index.js",
   "scripts": {
