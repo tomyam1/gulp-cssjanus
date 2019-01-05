@@ -1,7 +1,7 @@
 (function() {
 
   'use strict';
-  var gutil = require('gulp-util'),
+  var Vinyl = require('vinyl'),
     cssjanus = require('cssjanus'),
     gulpCssjanus = require('./index'),
     expect = require('chai').expect,
@@ -28,7 +28,7 @@
         done();
       });
 
-      stream.write(new gutil.File({
+      stream.write(new Vinyl({
         path: 'styles.css',
         contents: new Buffer('.selector { float: left; /* comment */ }')
       }));
@@ -45,7 +45,7 @@
         done();
       });
 
-      stream.write(new gutil.File({
+      stream.write(new Vinyl({
         path: 'styles.css',
         contents: new Buffer('.selector { float: left; /* comment */ }')
       }));
@@ -66,7 +66,7 @@
         done();
       });
 
-      stream.write(new gutil.File({
+      stream.write(new Vinyl({
         path: 'styles.css',
         contents: new Buffer('.selector { float: left; /* comment */ }')
       }));
@@ -96,7 +96,7 @@
         done();
       });
 
-      stream.write(new gutil.File({
+      stream.write(new Vinyl({
         path: 'styles.css',
         contents: new Buffer('.selector { float: left; /* comment */ }')
       }));
